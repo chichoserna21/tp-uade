@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfum stage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagenes/icon.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="top-header">
+            <div class="logo">
+                <span onclick="navegar('inicio')" style="cursor: pointer;">Perfum stage</span>
+            </div>
+            
+            <form class="search-bar">
+                <input type="text" placeholder="Buscar..." aria-label="Buscar productos">
+            </form>
+            
+            <nav class="nav-iconos">
+                <ul>
+                    <li><a href="#" onclick="irASeccion('verano')">Fragancias Verano</a></li>
+                    <li><a href="#" onclick="irASeccion('invierno')">Fragancias Invierno</a></li>
+                    <li><a href="#" onclick="irASeccion('sale')" class="perfu-sale">PERFU SALE</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <nav class="nav-principal">
+            <div class="nav-wrapper">
+                <ul>
+                    <li><a href="#" onclick="navegar('inicio')" id="btn-inicio" class="nav-active">Inicio</a></li>
+                    <li><a href="#" onclick="navegar('nosotros')" id="btn-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#" onclick="navegar('contacto')" id="btn-contacto">Contacto</a></li>
+                    <li><a href="#" onclick="navegar('faq')" id="btn-faq">Preguntas</a></li>
+                </ul>
+                <div class="promo-text">
+                    <span>6 CUOTAS SIN INTERÉS EN TODO EL SITIO</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="main-content">
+        
+        <div id="seccion-inicio">
+            <section class="hero-banner">
+                <img src="imagenes/212banner.jpg" alt="Banner 212 VIP Black Elixir">
+            </section>
+            
+            <section id="verano" class="categoria-productos">
+                <h2>Fragancias de verano</h2>
+                <div class="productos-grid"></div> 
+            </section>
+
+            <section id="invierno" class="categoria-productos">
+                <h2>Fragancias de invierno</h2>
+                <div class="productos-grid"></div> 
+            </section>
+
+            <section id="sale" class="categoria-productos">
+                <h2>Perfu Sale</h2>
+                <div class="productos-grid"></div> 
+            </section>
+        </div>
+
+        <div id="seccion-nosotros" style="display: none;">
+            <div class="main-content-pagina">
+                <div class="historia-cuadro">
+                    <h2>Nuestra Historia</h2>
+                    <p>
+                        Bienvenidos a "Perfum stage". Nacimos en 2020 como un proyecto entre amigos y amantes de la perfumería que compartían la misma inquietud: muchas fragancias valiosas tenían historias y matices que se perdían en el circuito comercial masivo. Lo que comenzó como encuentros para intercambiar muestras y recomendaciones se volvió una misión: crear un espacio donde cada fragancia se presentara con contexto, respeto y el cuidado que merece. Desde nuestros primeros clientes —vecinos, colegas y conocidos— hasta la comunidad que hemos construido hoy, cada paso lo dimos escuchando y aprendiendo sobre gustos, recuerdos y ocasiones que las personas asocian con un aroma.
+                    </p>
+                    <p>
+                        Nuestra selección no es aleatoria: cada producto pasa por un proceso de curaduría. Evaluamos notas olfativas, fijación, procedencia y trazabilidad; comprobamos la autenticidad de los lotes y preferimos trabajar con distribuidores y perfumistas que respeten las fórmulas originales. Buscamos un equilibrio entre clásicos de autor y propuestas de nicho, dando prioridad a fragancias que realmente ofrecen una experiencia distintiva. Además, documentamos y probamos internamente cada referencia para poder recomendar con conocimiento y transparencia.
+                    </p>
+                    <p>
+                        Atendemos a quienes nos visitan como si fueran invitados: ofrecemos asesoramiento personalizado, sugerencias por personalidad u ocasión, y la posibilidad de probar muestras antes de decidir. Organizamos pequeñas catas y talleres para quienes desean profundizar en la composición, las notas y el cuidado del perfume; creemos que comprender una fragancia multiplica el disfrute que aporta. Para nosotros, la relación con el cliente es diálogo: sugerencias, devoluciones de experiencias y recomendaciones alimentan la selección y el servicio.
+                    </p>
+                    <p>
+                        Miramos el futuro con responsabilidad y ganas de crecer con sentido. Estamos incorporando prácticas más sostenibles en embalajes y logística, buscando marcas que compartan valores de transparencia y responsabilidad ambiental. También planeamos ampliar nuestras actividades educativas y colaboraciones locales para fortalecer la comunidad olfativa que nos acompañó desde los inicios. Nuestro objetivo no es solo vender fragancias, sino ayudar a cada persona a encontrar ese aroma que la represente y le recuerde momentos importantes.
+                    </p>
+                    <p>
+                        Gracias por acompañarnos en este camino aromático. Si querés conocernos en persona o recibir asesoramiento digital, nuestra tienda online y nuestros canales de contacto están siempre abiertos; será un placer escucharte, recomendarte y ayudarte a descubrir la fragancia que cuente tu historia.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="seccion-contacto" style="display: none;">
+            <div class="main-content-pagina">
+                <h2>Contacto</h2>
+                <p id="form-descripcion">Envíanos tu consulta y te responderemos a la brevedad.</p>
+
+                <form class="form-contacto" id="formularioContacto">
+                    <div class="form-grupo">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre">
+                        <p class="form-error-input"></p> 
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email">
+                        <p class="form-error-input"></p> 
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="6"></textarea>
+                        <p class="form-error-input"></p> 
+                    </div>
+                    
+                    <button type="submit" class="btn-enviar">Enviar Consulta</button>
+                </form>
+                
+                <p id="form-mensaje-exito" class="form-exito"></p>
+            </div>
+        </div>
+
+        <div id="seccion-faq" style="display: none;">
+            <div class="main-content-pagina">
+                <h2>Preguntas Frecuentes</h2>
+                <p>Todo lo que necesitas saber antes de comprar.</p>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <h3 class="pregunta" onclick="toggleRespuesta('r1')">¿Los productos son originales?</h3>
+                        <p id="r1" class="respuesta" style="display: none;">
+                            Absolutamente. Todos nuestros perfumes provienen de distribuidores certificados y cuentan con sello de importación oficial.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="pregunta" onclick="toggleRespuesta('r2')">¿Cuáles son los tiempos de envío?</h3>
+                        <p id="r2" class="respuesta" style="display: none;">
+                            Los envíos en CABA demoran de 24 a 48hs hábiles. Para el resto del país, el correo estima entre 3 y 6 días hábiles.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="pregunta" onclick="toggleRespuesta('r3')">¿Puedo pagar en cuotas?</h3>
+                        <p id="r3" class="respuesta" style="display: none;">
+                            Sí, ofrecemos 3 y 6 cuotas sin interés con todas las tarjetas bancarias. También aceptamos transferencia con descuento.
+                        </p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3 class="pregunta" onclick="toggleRespuesta('r4')">¿Tienen local a la calle?</h3>
+                        <p id="r4" class="respuesta" style="display: none;">
+                            Por el momento somos una tienda 100% online, lo que nos permite ofrecer mejores precios al no tener costos de local físico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer" id="info-footer">
+        <p>Perfum stage &copy; 2025 - Diseño y Desarrollo Web - UADE</p>
+    </footer>
+
+    <script src="main2.js"></script>
+</body>
+</html>
